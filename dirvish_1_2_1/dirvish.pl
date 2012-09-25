@@ -592,7 +592,7 @@ if ($$Options{'pre-client'})
 	);
 	if ($status{'pre-client'})
 	{
-		my $s = $status{'pre-client'};
+		my $s = $status{'pre-client'} >> 8;
 		printf SUMMARY "pre-client failed (%d)\n", $s;
 		printf STDERR "%s:%s pre-client failed (%d)\n",
 			$$Options{vault}, $$Options{branch},
